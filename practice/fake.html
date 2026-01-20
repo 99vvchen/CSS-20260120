@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pseudo-element</title>
+  <style>
+  p::first-letter{
+      font-size: 2em;
+      color: blue;
+    }
+    p::before{
+      content: "hi";
+      width: 100px;
+      height: 100px;
+      background-color: rgb(187, 101, 115);
+      display: block;
+      text-align: center;
+      line-height: 100px;
+      color: beige;
+      font-weight: bold;
+      border-radius: 50%;
+    }
+    p:hover::before{
+      width: 100px;
+      height: 100px;
+      display: block;
+      content: "hiii";
+      background-color: rgb(255, 201, 201)
+    }
+
+    p::after{
+      content: "meoww";
+      width: 100px;
+      height: 100px;
+      background-color: rgb(13, 102, 175);
+      display: block;
+      text-align: center;
+      line-height: 100px;
+      color: beige;
+      font-weight: bold;
+      border-radius: 50%;
+    }
+p::selection{
+  background-color: #d4a4a4;
+}
+   
+  </style>
+</head>
+<body>
+  <p>今天星期日</p>
+</body>
+</html>

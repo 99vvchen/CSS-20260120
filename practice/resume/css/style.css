@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Special+Gothic+Expanded+One&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+/* 電腦與平板上應用的樣式 */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+           
+        }
+        body {
+            background-color: rgb(237, 237, 237);
+            margin: 0px;
+            font-size: 16px;
+            font-family:"Zalando Sans Expanded","Noto Sans TC";
+            
+        }
+        section{
+          padding: 50px 0;
+        }
+
+        /* HEADER */
+        header{
+            background-color: #333;
+            /* height: 50px; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo{
+            width: 100px;
+            height: 50px;
+            
+        }
+        .logo a{
+            width: 100%;
+            height: 100%;
+           color: white;
+           font-weight: bold;
+           font-size: 20px;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+             text-decoration: none;
+        }
+        .menu-icon{
+            color: rgb(255, 255, 255);
+            display: none;
+            width: 100%;
+        }
+        
+        .navbar>ul{
+          width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+           gap: 20px;
+           list-style-type: none;
+           
+        }
+        .navbar ul > li{
+            width: 100px;
+            height: 50px;   
+            /* background-color: purple; */
+            
+        }
+        .navbar ul > li > a{
+          width: 100%;
+          height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            /* background-color: #ccff41; */
+             text-decoration: none;   
+        }
+        .navbar ul li a:hover{
+            color: #f1be14;
+            
+        }
+        /* BANNER */
+        .banner{
+          width: 100%;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          position: relative;
+          background-color: #333;
+        
+          
+        }
+        .banner h3{
+          font-size: 48px;
+          color: rgb(252, 252, 252);
+
+        }
+        .banner h1{
+          font-size: 81px;
+          font-family: "Special Gothic Expanded One";
+          font-weight: bold;
+          color: rgb(252, 252, 252);
+          text-align: center;
+          z-index: 2;
+          position: relative;
+         text-shadow: -5px 5px 5px black;
+         
+         
+        }
+        .banner h1::after{
+          content: "PROFOLIO!";
+          color: #f1be14;
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-clip-path: ellipse(100px 100px at 0% 50%);
+          clip-path: ellipse(200px 200px  at 0% 50%);
+          
+          animation: spotlight 5s ease-in-out infinite;
+        }
+        .circle1{
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          width: 500px;
+          height: 500px;
+          border: 15px solid #ffffff;
+          border-radius: 50%;
+          animation: circle1 10s ease-in-out infinite;
+        }
+        .circle2{
+          position: absolute;
+          width: 300px;
+          height: 300px;
+          border: 10px solid #f1be14;
+          border-radius: 50%;
+          animation: circle2 10s ease-in-out infinite;
+
+        }
+       .banner .shape1{
+        background: #f1be14;
+        width: 500px;
+        height: 500px;
+        position:absolute;
+        right: 200px;
+        top: 200px;
+            transform: translate(0px, 0px) scale(1.6, 1.5) skew(-60deg, -9deg);
+        animation: star 10s ease infinite;
+       }
+
+       /* ANIMATION */
+       @keyframes spotlight {
+        0%{-webkit-clip-path: ellipse(100px 100px at 0% 50%);
+          clip-path: ellipse(100px 100px at 0% 50%);
+
+        }
+        50%{-webkit-clip-path: ellipse(100px 100px at 100% 50%);
+          clip-path: ellipse(100px 100px at 100% 50%);
+
+        }
+        100%{-webkit-clip-path: ellipse(100px 100px at 0% 50%);
+          clip-path: ellipse(100px 100px at 0% 50%);
+
+        }
+        
+       }
+
+       @keyframes circle1 {
+        0%{ 
+          left: 0%;
+          top: -10%;
+        }
+        50% {
+        left: -10%;
+        top: 0%;
+        }
+        70% {
+        left: -10%;
+        top: 5%;
+        }
+        100% {
+        left: 0%;
+          top: -10%;;
+       }
+      }
+      @keyframes circle2 {
+        0%{ 
+          left: 0%;
+          top: -5%;
+        }
+        50% {
+        left: 10%;
+        top: -10%;
+        }
+        70% {
+        left: 5%;
+        top: -5%;
+        }
+        100% {
+        left: 0%;
+        top: -5%;
+       }
+      }
+       @keyframes star {
+        0%{clip-path: path("M191.111 36.2909L216.676 91.2705L350.589 147.679L232.476 125.25L258.04 180.229L159.478 111.388L41.3647 88.9588L98.5626 68.8415L1.40253e-06 -2.52432e-05L133.913 56.4083L191.111 36.2909Z");}
+        25%{
+          clip-path: path("M180.624 9.89437e-06L234.102 90.0538L378.786 76.5881L267.154 145.71L320.632 235.764L198.161 188.43L86.5294 257.552L122.47 159.176L-1.18609e-06 111.842L144.683 98.376L180.624 9.89437e-06Z");
+          background: #d44511;;
+        }
+        50%{clip-path: path("M190.699 2.63751e-06L235.082 31.9983L380.371 34.3836L262.513 51.7744L306.897 83.7728L189.672 62.5226L71.8141 79.9134L117.224 49.3892L-9.21437e-06 28.139L145.289 30.5242L190.699 2.63751e-06Z");}
+         75%{clip-path: path("M33.0968 -1.77512e-05L72.9594 90.8643L118.051 78.5158L97.5959 147.022L137.458 237.886L84.954 189.36L64.499 257.866L52.5045 159.37L-1.35114e-05 110.845L45.0914 98.4961L33.0968 -1.77512e-05Z");
+        background: #fbe8a9;}
+        100%{clip-path: path("M191.111 36.291L216.676 91.2706L350.589 147.679L232.476 125.25L258.04 180.229L159.478 111.388L41.3647 88.9589L98.5626 68.8415L1.40253e-06 3.57919e-05L133.913 56.4083L191.111 36.291Z");
+      }
+       }
+        
+
+        
+
+        /* about */
+        .container {
+
+              width: 80%;
+              max-width: 1140px;
+              margin: auto;
+              display: flex;
+              justify-content: space-between;
+              gap:20px;
+            }
+            .intro{
+              width: 48%;
+              /* background-color: #e29090; */
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              gap: 20px;
+              padding: 30px;
+            }
+            .my-photo{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            
+              
+            }
+            .photo img{
+              width: 100%;
+            }
+            .profile h2{
+              font-size: 2rem;
+              margin-bottom: 10px;
+            }
+            .education h3{
+              font-size: 1.5rem;
+              margin-bottom: 10px;
+            }
+            .edu1,.edu2{
+              width: 100%;
+              height: 100px;
+              background-color: #d5d5d5;
+              border-radius: 10px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              padding: 10px;
+              margin-bottom: 10px;
+            }
+            .edu1 h4,
+            .edu2 h4{
+              font-size: 1.2rem;
+            }
+            .edu1 p.desc,
+            .edu2 p.desc{
+              color: #333;
+            }
+
+            /* 技能條 */
+            ul.skill-list{
+              width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+    }
+    .skill-list li{
+    display: flex;
+    align-items: center;
+     margin: 20px 0;
+    
+      
+    }
+    .skill-name{
+      width: 200px;
+      font-size: 20px;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      font-weight: bold;
+    }
+    .skill-bar{
+      display: flex;
+      width: 300px;
+      height: 30px;
+      background-color: #e4e4e4;
+      border-radius: 30px;
+      box-shadow:-2px 2px 10px #acabab inset;
+
+    }
+    .skill-level{
+      height: 97%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      color: #ffffff;
+      font-weight: bold;
+      
+    }
+    /* 各技能 */
+    .skill-html{
+      width: 90%;
+      background-image: linear-gradient(to right top, #367eeb, #00aff9, #00d4d8, #7ceead, #f3ff9f);
+      animation: ani-html 1s ease-in-out alternate ;
+    }
+    .skill-css{
+      width: 80%;
+      background-image: linear-gradient(to right top, #e5375d, #f56949, #f7973f, #eec34a, #ddec6f);
+      animation: ani-css 1.1s ease-in-out alternate;
+    }
+    .skill-js{
+      width: 70%;
+      background-image: linear-gradient(to right top, #1f9241, #58a949, #85c053, #b1d660, #ddec6f);
+      animation: ani-js 1.2s ease-in-out alternate;
+    }
+    .skill-php{
+      width: 60%;
+      background-image: linear-gradient(to right top, #644412, #876924, #a79239, #c4be52, #ddec6f);
+      animation: ani-php 1.3s ease-in-out alternate;
+    }
+    .skill-mysql{
+      width: 65%;
+      background-image: linear-gradient(to right top, #d68484, #d994bd, #bdb0ec, #92ceff, #7ee6fb);
+      animation: ani-mysql 1.4s ease-in-out alternate;
+    }
+    /* animation */
+    @keyframes ani-html {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 90%;
+      }
+    }
+    @keyframes ani-css {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 80%;
+      }
+    }
+    @keyframes ani-js {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 70%;
+      }
+    }
+    @keyframes ani-php {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 60%;
+      }
+    }
+    @keyframes ani-mysql {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 65%;
+      }
+    }
+        /* work */
+          section.work{
+            background-color: green;
+             
+          }
+          .work .container{
+            display: flex;
+          flex-direction: column;
+          
+          }
+          .work-experience{
+            width: 100%;
+            height: 80px;
+            background: brown;
+            display: flex;
+            justify-content: flex-starts;
+            align-items: center;
+           
+          }
+          .work-period{
+            width: 250px;
+            font-size: 1.5rem;
+            font-weight: bold;
+           
+          }
+          .company-logo{
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 50px;
+          }
+          .company-logo img{
+            width: 100%;
+            height:100% ;
+            display: block;
+            object-fit: cover;
+            object-position: center center;
+          }
+          .position-title{
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+          /* gallery */
+          .gallery .container{
+      width: 80%;
+      margin: 200px auto;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-template-rows: repeat(3,200px);
+      gap: 20px;
+    
+    }
+    .photo-frame{
+      background-color: pink;
+      height: 200px;
+      overflow: hidden;
+    }
+     .photo-frame img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 1s ease;
+      
+      
+     }
+    .photo-frame:nth-child(1){
+      grid-area: 1 / 1 / 3 / 3;
+      height: 420px;
+      object-position: top top ;
+      
+     }
+    img:nth-child(1):hover{
+      transform: scale(1.5);
+     }
+     .photo-frame:nth-child(2){
+  
+      object-fit: cover;
+     }
+     .photo-frame:nth-child(5){
+      grid-area: 2 / 3 / 3 / 5;
+     }
+     .photo-frame:last-child{
+      grid-area:3 / 4 / 4 / 6;
+      object-position: bottom bottom;
+     }
+          /* gallery1 */
+          .gallery1{
+            background-color: #c1fae0;
+          }
+          .photo-list{
+            width: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            gap:10px;
+            flex-wrap: wrap;
+          }
+          .info{
+            background-color: #b954bd;
+            height:300px;
+            width: 30%;
+          }
+          .info:nth-child(odd){
+            background-color: #f39b9b;
+          }
+
+          footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 50px;
+            color: white;
+          }
+
+
+
+
+        /* 手機 */
+        @media screen and (max-width: 500px){
+            header{
+                flex-wrap: wrap; 
+              /* 讓內容分散在兩頭 */
+              justify-content: space-between; 
+              padding: 0 15px;
+            }
+            .logo{
+              width: auto;
+            }
+            .menu-icon{
+              display: block;
+                width: auto;
+            }
+            .navbar{
+                width: 100%;
+            }
+            .navbar ul{
+                flex-wrap: wrap;
+            }
+            .navbar ul li{
+                width: 100%;
+                padding:10px 0;
+                border-bottom: 1px solid white;
+            }
+            /* about */
+            .container {
+              flex-direction: column;
+              width: 100%;
+            }
+            .photo,.intro{
+              width: 100%;
+            }
+
+          .skill-list{
+            width: 100%;
+          }
+          .info{
+            width: 46%;
+          }
+
+          .info:nth-child(3){
+            order: 2;
+          }
+          .info:nth-child(4){
+            order: 1;
+          }
+          .info:nth-child(5){
+            order: 3;
+          }
+          .info:nth-child(6){
+            order: 4;
+          }
+        }

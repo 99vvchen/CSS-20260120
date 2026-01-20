@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技能動畫</title>
+  <style>
+    .skill-list{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+    }
+    .skill-list li{
+    display: flex;
+    align-items: center;
+     margin: 20px 0;
+    
+      
+    }
+    .skill-name{
+      width: 150px;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+    }
+    .skill-bar{
+      display: flex;
+      width: 300px;
+      height: 30px;
+      background-color: #e4e4e4;
+      border-radius: 30px;
+      box-shadow:-2px 2px 10px #acabab inset;
+
+    }
+    .skill-level{
+      height: 97%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      font-weight: bold;
+      
+    }
+    /* 各技能 */
+    .skill-html{
+      width: 90%;
+      background-image: linear-gradient(to right top, #367eeb, #00aff9, #00d4d8, #7ceead, #f3ff9f);
+      animation: ani-html 1s ease-in-out alternate ;
+    }
+    .skill-css{
+      width: 80%;
+      background-image: linear-gradient(to right top, #e5375d, #f56949, #f7973f, #eec34a, #ddec6f);
+      animation: ani-css 1.1s ease-in-out alternate;
+    }
+    .skill-js{
+      width: 70%;
+      background-image: linear-gradient(to right top, #1f9241, #58a949, #85c053, #b1d660, #ddec6f);
+      animation: ani-js 1.2s ease-in-out alternate;
+    }
+    .skill-php{
+      width: 60%;
+      background-image: linear-gradient(to right top, #644412, #876924, #a79239, #c4be52, #ddec6f);
+      animation: ani-php 1.3s ease-in-out alternate;
+    }
+    .skill-mysql{
+      width: 65%;
+      background-image: linear-gradient(to right top, #d68484, #d994bd, #bdb0ec, #92ceff, #7ee6fb);
+      animation: ani-mysql 1.4s ease-in-out alternate;
+    }
+    /* animation */
+    @keyframes ani-html {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 90%;
+      }
+    }
+    @keyframes ani-css {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 80%;
+      }
+    }
+    @keyframes ani-js {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 70%;
+      }
+    }
+    @keyframes ani-php {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 60%;
+      }
+    }
+    @keyframes ani-mysql {
+      from{
+        width: 0%;
+
+      }
+      to{
+        width: 65%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="skill-box">
+    <h2>技能</h2>
+    <ul class="skill-list">
+      <li>
+        <span class="skill-name">HTML</span>
+      <span class="skill-bar">
+        <span class="skill-level skill-html">90%</span>
+      </span>
+    </li>
+      <li>
+         <span class="skill-name">CSS</span>
+      <span class="skill-bar">
+        <span class="skill-level skill-css">80%</span>
+      </span>
+      </li>
+      <li>
+          <span class="skill-name">JAVASCRIPT</span>
+      <span class="skill-bar">
+        <span class="skill-level skill-js">70%</span>
+      </li>
+      <li>  <span class="skill-name">PHP</span>
+      <span class="skill-bar">
+        <span class="skill-level skill-php">60%</span>
+      </li>
+      <li>
+          <span class="skill-name">MYSQL</span>
+      <span class="skill-bar">
+        <span class="skill-level skill-mysql">65%</span>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

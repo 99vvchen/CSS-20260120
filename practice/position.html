@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+       box-sizing: border-box;
+    }
+  .box1 {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            background: #e51717;
+            border: 2px solid black;
+            /* position: relative; */
+            margin: 10px;
+            /* float: left; */
+            opacity: 0.8;
+        }
+        .new-box{
+          width: 200px;
+          height: 200px;
+          background-color: pink;
+          border: #0d0c0c solid 1px;
+          position: ab;
+          left: 200px;
+      
+
+        }
+        .box2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            color: #0d0c0c;
+            background-color: #1589b8;
+            /* padding: 20px; */
+            border: 2px solid black;
+            top: 50px;
+            left: 50px;
+            /* z-index: 2; */
+        }
+      
+        .box3 {
+            width: 200px;
+            height: 100px;
+            color: #0d0c0c;
+            background-color: greenyellow;
+            padding: 20px;
+            border: 2px solid black;
+            position: relative;
+            /* top: 50px;
+            left: 50px; */
+            /* z-index: 1; */
+        }
+        
+        .box1 p {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>Hello, world!</p>
+    </div>
+
+    <div class="new-box">
+      <div class="box2">
+        <p>CSS課程</p>
+    </div>
+    </div>
+    
+    <div class="new-box1">
+    <div class="box3"></div>
+  </div>
+</body>
+</html>

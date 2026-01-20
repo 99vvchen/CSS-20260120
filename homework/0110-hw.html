@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17陳婷語</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: "Noto Sans";
+    }
+    header{
+      width: 100%;
+      height: 60px;
+      border: 1px solid black;
+      display: flex;
+      padding: 10px 30px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo{
+      background: url(./0110imgs/logo.png) no-repeat;
+      width: 100px;
+      height: 60px;
+      background-size: contain;
+    }
+    .nav{
+      display: flex;
+      list-style-type: none;
+      
+    }
+    .nav a{
+      color: black;
+      margin: 10px;
+      font-size: larger;
+    }
+     .nav a:hover{
+      color: tomato;
+      transition: 0.3s ease;
+     }
+
+    h1{
+      width: 100%;
+      height: 80px;
+      text-align: center;
+      line-height: 80px
+    }
+    .container1{
+      width: 100%;
+  
+    }
+    .news{
+      margin: 30px;
+    }
+    .info{
+      width: 800px;
+      display: flex;
+      border-bottom: 1px dashed #333;
+      margin:auto;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .date{
+      margin-right: 20px;
+    }
+
+    .category{
+      /* width: 800px; */
+      display: flex;
+      flex-direction: row;
+      margin: 30px auto;
+      justify-content: center;
+      gap: 30px;
+    }
+    .box1,.box2,.box3{
+      width: 200px;
+      height: 200px;
+      
+    }
+    .box1{
+      background-color: blue;
+    }
+    
+     .box2{
+      background-color: tomato;
+    }
+    .box3{
+      background-color: rgb(123, 231, 239);
+    }
+    
+    .box1 img,
+    .box2 img,
+    .box3 img{
+      width: 200px;
+      padding: 10px;
+    }
+
+    .box1 p,
+    .box2 p,
+    .box3 p{
+      text-align: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    footer{
+      width: 100%;
+      height: 60px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 2px;
+      font-weight: lighter;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+    <ul class="nav">
+      <a href="#"><li>最新消息</li></a>
+      <a href="#"><li>產品介紹</li></a>
+      <a href="#"><li>聯絡我們</li></a>
+    </ul>
+  </header>
+  <h1>最新消息</h1>
+  <div class="container1">
+    <div class="news">
+    <div class="info">
+      <div class="date">2023-06-23</div>
+    <div class="detail">新品上市，優惠7折</div>
+  </div>
+  <div class="info">
+      <div class="date">2023-05-30</div>
+    <div class="detail">預訂生日蛋糕送好禮</div>
+  </div>
+  <div class="info">
+      <div class="date">2023-05-01</div>
+    <div class="detail">母親節蛋糕特惠中</div>
+  </div>
+  </div>
+    
+    <h1>產品分類</h1>
+    <div class="container2">
+      <div class="category">
+      <div class="box1">
+        <img src="./0110imgs/cake-cover.jpg" alt="cake" >
+      <p>蛋糕</p>
+    </div>
+      <div class="box2">
+        <img src="./0110imgs/bread.jpg" alt="bread" >
+      <p>麵包</p>
+      </div>
+      <div class="box3">
+        <img src="./0110imgs/dessert.jpg" >
+      <p>甜點</p>
+      </div>
+    </div>
+  </div>
+  <footer>copyright&copy;17-陳婷語</footer>
+</body>
+</html>

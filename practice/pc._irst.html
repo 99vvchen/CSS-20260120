@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RWD電腦先決</title>
+ <style>
+/* 
+  <!-- 電腦 --> */
+  .navbar {
+    width: 80%;
+    height: 50px;
+    background-color:lightblue;
+    margin: auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+   /* <!-- 平板 --> */
+   @media screen and (max-width:1220px) {
+    .navbar {
+    width: 80%;
+    height: 50px;
+    background-color:rgb(1, 75, 100);
+  }
+   }
+    /* <!-- 手機 --> */
+    @media screen and (max-width:480px) {
+    .navbar {
+    width: 100%;
+    height: 50px;
+    background-color:rgb(255, 45, 62);
+    color: yellow;
+  }
+   }
+    
+    </style>
+</head>
+
+<body>
+  <nav class="navbar">meowww</nav>
+</body>
+</html>

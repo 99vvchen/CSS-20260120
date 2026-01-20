@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陰影(shadow)樣式練習</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: pink;
+            /* 替區塊加上陰影 */
+            box-shadow: 16px 21px 20px 10px rgba(255, 0, 0, 0.3);
+            border-radius: 0 30px ;
+            background-color: linear-gradient(to right bottom, #f62ea0, #f54faf, #f366bc, #f17bc8, #ef8dd2, #f896c8, #fda0c1, #ffabbd, #ffb8a9, #ffcd99, #fee597, #e0fda9);
+            transition: all 2s;
+        }
+        .box:hover{
+            background: linear-gradient(to right bottom, #79acf9, #77a6f3, #759fee, #7399e8, #7193e2, #7a95e2, #8298e1, #8a9ae1, #9da6e7, #aeb2ec, #bebff2, #ceccf8);
+            width: 600px;
+            color: white;
+           
+        }
+        h1{
+            /* 替文字加上陰影 */
+            text-shadow: 2px 5px 20px rgba(54, 18, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>最新消息</h1>
+    </div>
+</body>
+</html>
